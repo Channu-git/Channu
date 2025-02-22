@@ -1,0 +1,19 @@
+body{
+    background-color:navajowhite;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;margin: 0;
+    padding: 0;
+}
+header{
+    background-color: blueviolet;color:red;
+    padding: 10px;text-align: center;
+}
+nav ul{
+    list-style: none;padding: 0;display: flex;
+    justify-content: center;
+}
+nav li{
+    margin: 0 10px;
+}
+main{
+    padding: 20px;
+}
