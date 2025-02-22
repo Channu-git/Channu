@@ -1,0 +1,46 @@
+const catalog = [
+    { id: 1, name: 'Product 1', price: 20 },
+    { id: 2, name: 'Product 2', price: 30 },
+    { id: 3, name: 'Product 3', price: 25 },
+   ];
+   function loadCatalog() {
+   const catalogContainer = document.getElementById('content');
+   catalogContainer.innerHTML = '<h2>Catalog</h2>';
+   catalog.forEach(product => {
+   const productCard = document.createElement('div');
+   productCard.classList.add('product-card');
+   productCard.innerHTML = `<h3>${product.name}</h3><p>$${product.price}</p><button
+   onclick="addToCart(${product.id})">Add to Cart</button>`;
+   catalogContainer.appendChild(productCard);
+   });
+   }
+   function addToCart(productId) {
+   console.log(`Product ${productId} added to cart`);
+   alert(`Product ${productId} added to cart`)
+   }
+   loadCatalog();
+   function validateRegistration()
+   {
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+    if (username.trim() === '' || password.trim() === '') {
+   alert('Please enter both username and password.');
+    return false;
+    }
+    // Additional validation logic can be added as needed
+    alert("Valid Registration")
+    return true;
+    }
+    // Function to validate login form
+   function validateLogin() {
+    const username = document.getElementById('loginUsername').value;
+    const password = document.getElementById('loginPassword').value;
+    if (username.trim() === '' || password.trim() === '') {
+    alert('Please enter both username and password.');
+    return false;
+    }
+    // Additional validation logic can be added as needed
+    alert('Login Valid.');
+    return true;
+    }
+   
